@@ -166,7 +166,6 @@ const MatchingGame: React.FC<MatchingGameProps> = ({ onGameEnd }) => {
               {!card.isFlipped && !card.isMatched && !flippedCards.includes(card.id) && (
                 <div className="flex flex-col items-center justify-center w-full h-full">
                   <img src={zlogo} alt="ZMW Logo" className="w-20 h-20 mx-auto mb-2" />
-                  <span className="text-xl font-bold text-blue-700" style={{letterSpacing: '2px'}}>Ziva Wernick</span>
                 </div>
               )}
             </div>

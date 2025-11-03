@@ -4,10 +4,10 @@ import zlogo from './assets/zmw-logo.png'
 import MatchingGame from './MatchingGame'
 
 function App() {
-  const [count, setCount] = useState(0)
+  //const [count, setCount] = useState(0)
   // State to control game visibility: true to show game, false to show main app content
   const [showGame, setShowGame] = useState(false);
-  const [chatInput, setChatInput] = useState('');
+  //const [chatInput, setChatInput] = useState('');
 
   console.log("App component is rendering!"); // Debugging log for App component
 
@@ -21,7 +21,7 @@ function App() {
   const returnFromGame = () => {
     setShowGame(false);
   };
-
+/*
   const handleChatSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const normalized = chatInput.trim().toLowerCase();
@@ -30,7 +30,7 @@ function App() {
     }
     setChatInput('');
   };
-
+*/
   return (
     <>
       {showGame ? (
@@ -47,12 +47,6 @@ function App() {
               Settings
             </button>
             <button
-              onClick={() => alert('Red alert triggered')}
-              className="px-4 py-2 rounded-md bg-red-500 text-black font-semibold hover:bg-red-600 transition-colors"
-            >
-              Emo - Red Alert
-            </button>
-            <button
               onClick={startGame}
               className="px-4 py-2 rounded-md bg-green-600 text-black font-semibold hover:bg-green-700 transition-colors"
             >
@@ -63,24 +57,12 @@ function App() {
           {/* Logo section */}
           <div className="flex gap-8 mb-8">
             <a href="https://zivawernick.wixstudio.com/home" target="_blank">
-              <img src={zlogo} className="logo hover:opacity-80 transition-opacity" alt="Vite logo" />
+              <img src={zlogo} className="logo hover:opacity-80 transition-opacity" alt="ZMW logo" />
             </a>
           </div>
 
           {/* Title */}
           <h1 className="text-4xl font-bold text-gray-800 mb-8">Memory Game</h1>
-
-          {/* Counter section */}
-          <div className="bg-white p-6 rounded-lg shadow-lg mb-8">
-            <button 
-              onClick={() => setCount((count) => count + 1)}
-              className="px-6 py-3 bg-blue-500 text-black font-semibold rounded-lg hover:bg-blue-600 transition-colors shadow-md"
-            >
-              count is {count}
-            </button>
-            <p className="mt-4 text-gray-600 text-center">
-              Edit <code className="bg-gray-100 px-2 py-1 rounded">src/App.tsx</code> and save to test HMR
-            </p>
 
             {/* Button to start the Matching Game */}
             <button
@@ -90,13 +72,6 @@ function App() {
               Start Matching Game
             </button>
           </div>
-
-
-          {/* Footer text */}
-          <p className="text-gray-500 text-center max-w-md">
-            Click on the Vite and React logos to learn more
-          </p>
-        </div>
       )}
     </>
   )
