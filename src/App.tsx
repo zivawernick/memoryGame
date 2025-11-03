@@ -1,8 +1,6 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import BreathingApp from './breathing_module/BreathingApp'
+import zlogo from './assets/zmw-logo.png'
 import MatchingGame from './MatchingGame'
 
 function App() {
@@ -64,36 +62,13 @@ function App() {
 
           {/* Logo section */}
           <div className="flex gap-8 mb-8">
-            <a href="https://vite.dev" target="_blank">
-              <img src={viteLogo} className="logo hover:opacity-80 transition-opacity" alt="Vite logo" />
-            </a>
-            <a href="https://react.dev" target="_blank">
-              <img src={reactLogo} className="logo react hover:opacity-80 transition-opacity" alt="React logo" />
+            <a href="https://zivawernick.wixstudio.com/home" target="_blank">
+              <img src={zlogo} className="logo hover:opacity-80 transition-opacity" alt="Vite logo" />
             </a>
           </div>
 
           {/* Title */}
-          <h1 className="text-4xl font-bold text-gray-800 mb-8">Vite + React</h1>
-
-          {/* Chat-like prompt */}
-          <div className="w-full max-w-xl bg-white p-4 rounded-lg shadow mb-6">
-            <div className="text-gray-800 font-medium mb-2">What activity would you like to try?</div>
-            <form onSubmit={handleChatSubmit} className="flex gap-2">
-              <input
-                type="text"
-                value={chatInput}
-                onChange={(e) => setChatInput(e.target.value)}
-                placeholder="Try typing 'memory'"
-                className="flex-1 px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
-              />
-              <button
-                type="submit"
-                className="px-4 py-2 rounded-md bg-blue-600 text-black font-semibold hover:bg-blue-700 transition-colors"
-              >
-                Send
-              </button>
-            </form>
-          </div>
+          <h1 className="text-4xl font-bold text-gray-800 mb-8">Memory Game</h1>
 
           {/* Counter section */}
           <div className="bg-white p-6 rounded-lg shadow-lg mb-8">
@@ -116,10 +91,6 @@ function App() {
             </button>
           </div>
 
-          {/* Breathing App */}
-          <div className="mb-8">
-            <BreathingApp />
-          </div>
 
           {/* Footer text */}
           <p className="text-gray-500 text-center max-w-md">
